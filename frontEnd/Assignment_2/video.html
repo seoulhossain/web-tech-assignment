@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Video Conference</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Import CSS & JS from Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Include Jquery -->
+    <script src="assets/js/jquery.js"></script>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <style>
+        .buttons {
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        #my-video {
+            display: block;
+            margin: auto;
+        }
+    </style>
+
+    <!-- Navbar -->
+    <nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block" href="../index.html">RestFul API</a>
+            <a class="py-2 d-none d-md-inline-block" href="index.html">Home</a>
+            <a class="py-2 d-none d-md-inline-block" href="video.html">Video Conference</a>
+            <a class="py-2 d-none d-md-inline-block" href="messenger.html">Text Messaging & File Sharing</a>
+            <a class="py-2 d-none d-md-inline-block" href="calendar.html">Event Scheduler & Notification</a>
+            <a class="py-2 d-none d-md-inline-block" href="banner.html">Banner Management</a>
+        </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Content Goes Here -->
+    <div class="wrapper">
+        <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered vjs-layout-medium" controls preload="auto" width="940" height="500" poster="assets/img/nginx.webp" data-setup='{"responsive": true}'>
+    <source src="assets/video.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+    </div>
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+
+
+    <!-- End of Content -->
+
+    <!-- Welcome Message -->
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 font-weight-normal">Video Conference</h1>
+            <p class="lead font-weight-normal">Prepared by Lotfi Arif</p>
+            <p class="text-muted"><a href="index.html" class="btn btn-primary my-2">Back to Home</a></p>
+        </div>
+    </div>
+    <!-- End of Welcome Message -->
+
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>Web Technology</p>
+            <p>Lecturer Name : Assoc. Prof Dr Mohd Yazid Idris</p>
+        </div>
+    </footer>
+
+
+</body>

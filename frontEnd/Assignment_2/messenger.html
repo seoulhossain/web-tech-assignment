@@ -1,0 +1,309 @@
+<style> 
+
+body{
+	background: #f3f6fd;
+	font-family: Roboto;
+}
+
+#mca_app{
+	padding-left: 50px;
+	padding-top: 20px;
+	overflow-x: hidden;
+}
+
+#mca_app > section{
+	padding-top: 20px;
+	padding-bottom: 0;
+}
+
+#mca_side_bar{
+	position: fixed;
+	height: 100%;
+	width: 75px;
+	background: #669cfe;
+	left: 0;
+	top: 0;
+	text-align: center;
+}
+
+#mca_side_bar .chat_profile{
+	height: 15%;
+	padding-top: 10px;
+}
+
+.chat_profile img{
+	height: 50px;
+	border-radius: 50%;
+	background: #f3f6fd;
+	padding: 3px;
+	margin-bottom: 5px;
+}
+
+.chat_profile > span{
+	font-size: 14px;
+	font-weight: 400;
+	color: #eee;
+}
+
+#mca_side_bar .chat_menu{
+	height: 75%;
+}
+
+.chat_menu ul{
+	position: relative;
+	padding: 0;
+}
+
+.chat_menu ul li{
+	position: relative;
+	list-style: none;
+	font-size: 17px;
+	color: rgba(243,246,253,0.6);
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+.chat_menu ul li.active{
+	background-color: rgba(0,0,0,0.13);
+	color: #fff;
+	border-radius: 18px;
+}
+
+.chat_menu ul li.active:before{
+	position: absolute;
+	display: block;
+	content: '';
+	height: 8px;
+	width: 8px;
+	background-color: #fe6491;
+	border: none;
+	border-radius: 50%;
+	right: 0;
+	bottom: 3px;
+}
+
+#mca_side_bar .chat_bar{
+	height: 10%;
+	padding-top: 10px;
+	font-size: 17px;
+	color: rgba(243,246,253,0.6);
+}
+
+#mca_header_bar{
+	position: fixed;
+	padding-left: 45px;
+}
+
+#mca_header_bar div.col-8 i{
+	font-size: 16px;
+	color: rgba(0,0,0,0.3);
+}
+
+span.name{
+	font-size: 17px;
+	font-weight: 400;
+	color: rgba(0,0,0,0.6);
+	letter-spacing: 0.5px;
+	margin-left: 15px;
+}
+
+#mca_header_bar div.col-4 span{
+	position: absolute;
+	bottom: -5px;
+}
+
+#mca_header_bar div.col-4 span i{
+	height: 35px;
+	width: 35px;
+	background: #669cfe;
+	border-radius: 50%;
+	line-height: 35px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	box-shadow: 0 0 4px 5px rgba(75,134,250,0.1);
+}
+
+#mca_body{
+	position: fixed;
+	background: #fff;
+	height: 100%;
+	width: calc(100% - 75.5px);
+	top: 12%;
+	right: 0;
+}
+
+#mca_body ul{
+	padding: 0;
+}
+
+#mca_body ul li{
+	list-style: none;
+	font-size: 13px;
+	font-weight: 400;
+	margin-bottom: 35px;
+}
+
+#mca_body ul li:first-child{
+	margin-bottom: 30px;
+}
+
+#mca_body ul li:nth-child(even) span{
+	background-color: #f3f6fd;
+	color: rgba(0,0,0,0.5);
+	padding: 13px 20px;
+	border-radius: 25px;
+}
+
+#mca_body ul li:nth-child(odd) span{
+	background-color: #669cfe;
+	color: #fff;
+	padding: 13px 20px;
+	border-radius: 25px;
+}
+
+#mca_body ul li:nth-child(even){
+	text-align: left;
+}
+
+#mca_body ul li:nth-child(odd){
+	text-align: right;
+}
+
+#mca_body ul li:nth-child(1){
+	text-align: center;
+}
+
+#mca_body ul li:nth-child(1) span{
+	background-color: transparent;
+	color: rgba(0,0,0,0.25);
+	font-size: 12px;
+	padding: 0;
+}
+
+#mca_body ul li:nth-child(4) span{
+	color: #669cfe;
+	font-size: 7px;
+	padding: 16px 20px;
+}
+
+#mca_body ul li:nth-child(4) span i:first-child{
+	color: rgba(0,0,0,0.5);
+}
+
+#mca_body ul li:nth-child(4) span i:nth-child(2){
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+#mca_footer{
+	position: fixed;
+	bottom: 30px;
+}
+
+.mca_input_row{
+	position: relative;
+}
+
+.mca_input_row .mca_ip{
+	width: 80%;
+	padding: 13px 0 13px 20px;
+	border: none;
+	border-radius: 25px;
+	background-color: #f3f6fd;
+	font-size: 13px;
+	font-weight: 300;
+	margin-left: 6%;
+}
+
+.mca_input_row .fa-paper-plane{
+	position: absolute;
+	color: #669cfe;
+	font-size: 15px;
+	top: 15px;
+	right: 22%;
+}
+
+
+ </style>
+<div class="container-fluid">
+    <div class="row" id="mca_app">
+        
+        <section class="col-12" id="mca_side_bar">
+            <div class="chat_profile">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/UTM-LOGO.png" alt="">
+                <span>Profile</span>
+            </div>
+            <div class="chat_menu">
+                <ul>
+                    <li class="active"><i class="fa fa-bell"></i></li>
+                    <li><i class="fa fa-file-text"></i></li>
+                    <li><i class="fa fa-compass"></i></li>
+                    <li><i class="fa fa-google"></i></li>
+                    <li><i class="fa fa-envelope"></i></li>
+                </ul>
+            </div>
+            <div class="chat_bar">
+                <i class="fa fa-bars"></i>
+            </div>
+        </section>
+
+        <section class="col-12" id="mca_header_bar">
+            <div class="row">
+                <div class="col-8">
+                    <i class="fa fa-chevron-left"></i>
+                    <span class="name">Web Tech</span>
+                </div>
+                <div class="col-4">
+                    <span>
+                        <i class="fa fa-phone"></i>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="col-12" id="mca_body">
+            <div>
+                <ul>
+                    <li>
+                        <span>Today 17:00</span>
+                    </li>
+                    <li>
+                        <span>Good Evening Friend.</span>
+                    </li>
+                    <li>
+                        <span>Very Good Evening.</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <span>Today 17:20</span>
+                    </li>
+                    <li>
+                        <span>What's going on?</span>
+                    </li>
+                    <li>
+                        <span>Nothing much, at Office.</span>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="fa fa-circle"></i>
+                            <i class="fa fa-circle"></i>
+                            <i class="fa fa-circle"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="col-12" id="mca_footer">
+            <div class="row mca_input_row">
+                <div class="col-12">
+                    <input type="text" class="mca_ip" placeholder="Enter message here...">
+                    <i class="fa fa-paper-plane"></i>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
